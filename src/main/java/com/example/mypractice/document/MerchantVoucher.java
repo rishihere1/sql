@@ -2,6 +2,7 @@ package com.example.mypractice.document;
 
 import java.util.Date;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -10,6 +11,7 @@ import com.example.mypractice.dto.RedemptionLimit;
 import com.example.mypractice.dto.TimeRangeRule;
 import com.example.mypractice.dto.VoucherStatus;
 import com.example.mypractice.dto.VoucherType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,7 +24,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "dummy_data")
+@Document(collection = "Customer")
 public class MerchantVoucher {
 
   @org.springframework.data.annotation.Id
@@ -74,5 +76,11 @@ public class MerchantVoucher {
   private Date executeStartDate;
   @Field
   private Date endDate;
+
+  @Field
+//  @JsonIgnore
+  @DBRef(lazy = true)
+  private SpecialOccasion specialOccasion;
+
 }
 

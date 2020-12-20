@@ -19,4 +19,8 @@ public interface MerchantVoucherRepositoryCustom {
   void upsertCheck(MerchantVoucherDTO merchantVoucherDTO);
 
   List<MerchantVoucher> getIncludeTest();
+
+  void getItemsAggregation();
+
+  List<MerchantVoucher> getByVoucherCode();
 }

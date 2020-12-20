@@ -1,5 +1,7 @@
 package com.example.mypractice.service;
 
+import java.util.List;
+
 import com.example.mypractice.document.MerchantVoucher;
 import com.example.mypractice.dto.MerchantVoucherDTO;
 
@@ -24,5 +26,17 @@ public interface MerchantVoucherService {
 
   void getInclude();
 
-  //  void testDate();
+  void getAggregate();
+
+  void queryAnnotaion();
+
+  void nullCheck();
+
+  void dbRefCheck(MerchantVoucherDTO merchantVoucherDTO);
+
+  void saveMerchant();
+
+  List<MerchantVoucher> getVoucher();
+
+  //  void populateDataAutomatically();
 }

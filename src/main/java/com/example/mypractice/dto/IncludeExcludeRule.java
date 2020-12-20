@@ -1,5 +1,6 @@
 package com.example.mypractice.dto;
 
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -15,5 +16,5 @@ public class IncludeExcludeRule {
   private String ruleType;
 
   @Field
-  private Set<String> items;
+  private List<String> items;
 }
