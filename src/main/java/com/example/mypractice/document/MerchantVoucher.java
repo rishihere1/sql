@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "Customer")
+@Document(collection = "MerchantVoucher")
 public class MerchantVoucher {
 
   @org.springframework.data.annotation.Id
